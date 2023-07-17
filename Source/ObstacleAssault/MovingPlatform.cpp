@@ -3,7 +3,6 @@
 
 #include "MovingPlatform.h"
 
-// Sets default values
 AMovingPlatform::AMovingPlatform()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -21,7 +20,6 @@ void AMovingPlatform::BeginPlay()
 	UE_LOG(LogTemp, Display, TEXT("BeginPlay: %s"), *Name);
 }
 
-// Called every frame
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -29,7 +27,6 @@ void AMovingPlatform::Tick(float DeltaTime)
 	MovePlatform(DeltaTime);
 	RotatePlatform(DeltaTime);
 }
-
 
 void AMovingPlatform::MovePlatform(float DeltaTime)
 {
